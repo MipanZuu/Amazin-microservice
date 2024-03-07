@@ -16,7 +16,7 @@ jobs:
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service .
 
   build-api-gateway:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker build -t ${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
+          docker build -t ${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }} ./AmazinGateaway .
 
   deploy-product-service:
     needs: build-product-service
