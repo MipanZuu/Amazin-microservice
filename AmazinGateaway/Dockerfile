@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["AmazinGateaway.csproj", "."]
-RUN dotnet restore "AmazinGateaway/AmazinGateaway.csproj"
+RUN dotnet restore "AmazinGateaway.csproj"
 COPY . .
 WORKDIR "/src/AmazinGateaway"
 RUN dotnet build "AmazinGateaway.csproj" -c $BUILD_CONFIGURATION -o /app/build
