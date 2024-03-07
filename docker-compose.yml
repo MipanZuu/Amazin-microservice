@@ -1,12 +1,58 @@
-﻿version: '3.8'
+﻿#version: '3.8'
+#
+#services:
+#  product-service:
+#    container_name: product-service
+#    image: ${DOCKER_REGISTRY-}product-service
+#    build:
+#      context: .
+#      dockerfile: Product-Service/Dockerfile
+#    depends_on:
+#      - mongo
+#    networks:
+#      - amazinnetwork
+#
+#  mongo:
+#    image: mongo:latest
+#    restart: unless-stopped
+#    container_name: mongoproductservice
+#    ports:
+#      - "27020:27020"
+#    command: ["mongod", "--port", "27020"]
+#    volumes:
+#      - mongo-data:/data/db
+#    networks:
+#      - amazinnetwork
+#  
+#  amazingateaway:
+#    container_name: amazingateaway
+#    image: amazingateaway
+#    build:
+#      context: .
+#      dockerfile: AmazinGateaway/Dockerfile
+#    ports:
+#      - "8001:8080"
+#    networks:
+#      - amazinnetwork
+#
+#networks:
+#  amazinnetwork:
+#    driver: bridge
+#
+#volumes:
+#  mongo-data:
+
+
+
+version: '3.8'
 
 services:
   product-service:
     container_name: product-service
     image: ${DOCKER_REGISTRY-}product-service
     build:
-      context: .
-      dockerfile: Product-Service/Dockerfile
+      context: ./Product-Service
+      dockerfile: Dockerfile
     depends_on:
       - mongo
     networks:
@@ -26,10 +72,10 @@ services:
   
   amazingateaway:
     container_name: amazingateaway
-    image: amazingateaway
+    image: ${DOCKER_REGISTRY-}amazingateaway
     build:
-      context: .
-      dockerfile: AmazinGateaway/Dockerfile
+      context: ./AmazinGateaway
+      dockerfile: Dockerfile
     ports:
       - "8001:8080"
     networks:
@@ -41,3 +87,4 @@ networks:
 
 volumes:
   mongo-data:
+
