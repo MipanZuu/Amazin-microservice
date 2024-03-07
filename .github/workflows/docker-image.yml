@@ -13,12 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Product Service Docker image
-        uses: redhat-actions/buildah-build@v2
-        with:
-          image: ${{ secrets.DOCKER_USERNAME }}/product-service
-          tags: ${{ github.sha }}
-          dockerfiles: |
-            ./Product-Service
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
+          docker image ls
 
   build-api-gateway:
     runs-on: ubuntu-latest
