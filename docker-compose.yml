@@ -3,10 +3,10 @@
 services:
   product-service:
     container_name: product-service
-    image: ${DOCKER_REGISTRY-}product-service
+    image: ${DOCKER_USERNAME-}product-service
     build:
-      context: .
-      dockerfile: Product-Service/Dockerfile
+      context: ./Product-Service
+      dockerfile: Dockerfile
     depends_on:
       - mongo
     networks:
@@ -26,10 +26,10 @@ services:
   
   amazingateaway:
     container_name: amazingateaway
-    image: amazingateaway
+    image: ${DOCKER_USERNAME-}amazingateaway
     build:
-      context: .
-      dockerfile: AmazinGateaway/Dockerfile
+      context: ./AmazinGateaway
+      dockerfile: Dockerfile
     ports:
       - "8001:8080"
     networks:
