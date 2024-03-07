@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazinGateaway", "AmazinGateaway\AmazinGateaway.csproj", "{22B2856E-961C-4DAD-9D42-AF7662826FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product-Service", "Product-Service\Product-Service.csproj", "{F822C634-D668-46F3-8CBC-936E68A93D93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C59842B6-D17A-46D6-9A62-756E10D4B4C9}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22B2856E-961C-4DAD-9D42-AF7662826FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B2856E-961C-4DAD-9D42-AF7662826FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B2856E-961C-4DAD-9D42-AF7662826FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B2856E-961C-4DAD-9D42-AF7662826FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F822C634-D668-46F3-8CBC-936E68A93D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F822C634-D668-46F3-8CBC-936E68A93D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F822C634-D668-46F3-8CBC-936E68A93D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F822C634-D668-46F3-8CBC-936E68A93D93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,42 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  amazingateaway:
+    build:
+      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway"
+      dockerfile: "AmazinGateaway/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/AmazinGateaway.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "amazingateaway:dev"
+    ports: []
+    volumes:
+    - "/Users/dentabramasta/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway:/app:rw"
+    - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway:/src:rw"
+    working_dir: "/app"
+  product-service:
+    build:
+      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway"
+      dockerfile: "Product-Service/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Product-Service.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/Product-Service.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "product-service:dev"
+    ports: []
+    volumes:
+    - "/Users/dentabramasta/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service:/app:rw"
+    - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway:/src:rw"
+    working_dir: "/app"

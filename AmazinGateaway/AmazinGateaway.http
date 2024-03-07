@@ -1,0 +1,6 @@
+@AmazinGateaway_HostAddress = http://localhost:5254
+
+GET {{AmazinGateaway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
