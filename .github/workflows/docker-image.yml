@@ -12,18 +12,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Docker BuildX
-        uses: docker/setup-buildx-action@v2
+      - name: Product Build
+        uses: redhat-actions/buildah-build@v2
         with:
-          driver-opts: |
-            image=moby/buildkit:v0.12.0
-          buildkitd-flags: --debug
-
-      - name: Build Product Service Docker image
-        run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
-          docker tag ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/product-service:latest
-          docker image ls
+          image: ${{ secrets.DOCKER_USERNAME }}/product-service
+          tags: ${{ github.sha }}
+          dockerfiles: |
+            ./Product-Service
 
   build-api-gateway:
     runs-on: ubuntu-latest
@@ -34,20 +29,17 @@ jobs:
       - name: Build API Gateway Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
-          docker tag ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/amazingateaway:latest
           docker image ls
 
   deploy-product-service:
-    needs: build-product-service
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy Product Service Docker image
-        env:
-          APP_UID: 1000 # Provide appropriate user ID
-        run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/product-service:latest
+    name: push image to docker.io
+    uses: redhat-actions/push-to-registry@v2
+    with:
+      image: ${{ steps.Product-Build.outputs.image }}
+      tags: ${{ steps.Product-Build.outputs.tags }}
+      registry: docker.io
+      username: ${{ secrets.DOCKER_USERNAME }}
+      password: ${{ secrets.DOCKER_PASSWORD }}
   
   deploy-api-gateway:
     needs: build-api-gateway
@@ -59,4 +51,3 @@ jobs:
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/amazingateaway:latest
