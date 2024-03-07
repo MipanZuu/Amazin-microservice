@@ -6,24 +6,33 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and Push Product Service Docker image
+      - name: Build Product Service Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy Product Service Docker image
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
           docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}
 
-      - name: Build and Push API Gateway Docker image
+      - name: Deploy API Gateway Docker image
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
           docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }}
