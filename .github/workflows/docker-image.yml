@@ -41,8 +41,8 @@ jobs:
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker login -u ${{ secrets.DOCKER_REGISTRY }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push ${{ secrets.DOCKER_REGISTRY }}/product-service:${{ github.sha }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}
 
   deploy-api-gateway:
     needs: build-api-gateway
@@ -52,5 +52,5 @@ jobs:
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker login -u ${{ secrets.DOCKER_REGISTRY }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push ${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }}
