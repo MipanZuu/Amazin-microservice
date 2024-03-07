@@ -15,7 +15,6 @@ app.UseCors(builder => builder
     .AllowAnyMethod()
     .AllowAnyHeader()
 );
-app.MapGet("/test", () => "Hello, Denta, Welcome Back!");
 
 await app.UseOcelot();
 app.Run();
