@@ -49,7 +49,7 @@ version: '3.8'
 services:
   product-service:
     container_name: product-service
-    image: ${DOCKER_REGISTRY-}product-service:v1
+    image: dentabramasta/product-service:v1
     build:
       context: ./Product-Service
       dockerfile: Dockerfile
@@ -72,7 +72,7 @@ services:
   
   amazingateaway:
     container_name: amazingateaway
-    image: ${DOCKER_REGISTRY-}amazingateaway:v1
+    image: dentabramasta/amazingateaway:v1
     build:
       context: ./AmazinGateaway
       dockerfile: Dockerfile
