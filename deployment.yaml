@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+  annotations:
+    kubernetes.io/change-cause: "Initional deployment of the app"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-service
+  template:
+    metadata:
+      name: product-service-k8s
+      labels:
+        env: prod
+        app: product-service
+        app.kubernetes.io/name: product-service
+    spec:
+      containers:
+        - name: product-service
+          image: dentabramasta/product-service:v2
+          ports:
+            - containerPort: 80
+              name: http-web-api
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 200Mi
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+spec:
+  selector:
+    app.kubernetes.io/name: product-service
+  ports:
+    - name: product-service-port
+      protocol: TCP
+      port: 8080
+      targetPort: 80
+  type: LoadBalancer
