@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Product Service Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service ./Product-Service
           docker image ls
 
   build-api-gateway:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Build API Gateway Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway ./AmazinGateaway
           docker image ls
 
   deploy-product-service:
