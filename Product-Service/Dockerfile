@@ -7,7 +7,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Product-Service/Product-Service.csproj", "Product-Service/"]
+COPY ["Product-Service/Product-Service.csproj", "src/Product-Service/"]
 RUN dotnet restore "Product-Service/Product-Service.csproj"
 COPY . .
 WORKDIR "/src/Product-Service"
