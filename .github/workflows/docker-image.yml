@@ -22,7 +22,7 @@ jobs:
       - name: Build Product Service Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
-          echo "Product Service Docker image tag: ${{ secrets.DOCKER_REGISTRY }}/product-service:${{ github.sha }}"
+          echo "Product Service Docker image tag: ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}"
 
   build-api-gateway:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
       - name: Build API Gateway Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
-          echo "Product Service Docker image tag: ${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }}"
+          echo "Product Service Docker image tag: ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }}"
 
   deploy-product-service:
     needs: build-product-service
@@ -43,8 +43,8 @@ jobs:
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push docker.io/${{ secrets.DOCKER_REGISTRY }}/product-service:${{ github.sha }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}
   
   deploy-api-gateway:
     needs: build-api-gateway
@@ -54,5 +54,5 @@ jobs:
         env:
           APP_UID: 1000 # Provide appropriate user ID
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push docker.io/${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}          
+           docker push ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }}
