@@ -22,6 +22,7 @@ jobs:
       - name: Build Product Service Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
+          echo "Product Service Docker image tag: ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}"
 
   build-api-gateway:
     runs-on: ubuntu-latest
@@ -32,6 +33,7 @@ jobs:
       - name: Build API Gateway Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
+          echo "Product Service Docker image tag: ${{ secrets.DOCKER_USERNAME }}/amazingateaway:${{ github.sha }}"
 
   deploy-product-service:
     needs: build-product-service
