@@ -41,3 +41,4 @@
 /Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/AmazinGateaway.pdb
 /Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/AmazinGateaway.genruntimeconfig.cache
 /Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/ref/AmazinGateaway.dll
+/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/AmazinGateaway.sourcelink.json

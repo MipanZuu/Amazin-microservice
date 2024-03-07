@@ -39,3 +39,4 @@
 /Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/bin/Debug/net8.0/runtimes/win/native/mongocrypt.dll
 /Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/Debug/net8.0/Product-Service.csproj.AssemblyReference.cache
 /Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/Debug/net8.0/Product-Service.csproj.CopyComplete
+/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/Debug/net8.0/Product-Service.sourcelink.json
