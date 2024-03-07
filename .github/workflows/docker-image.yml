@@ -1,0 +1,53 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-product-service:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Product Service Docker image
+        env:
+          APP_UID: 1000 # Provide appropriate user ID
+        run: |
+          docker build -t ${{ secrets.DOCKER_REGISTRY }}/product-service:${{ github.sha }} ./Product-Service
+
+  build-api-gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build API Gateway Docker image
+        env:
+          APP_UID: 1000 # Provide appropriate user ID
+        run: |
+          docker build -t ${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }} ./AmazinGateaway
+
+  deploy-product-service:
+    needs: build-product-service
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Product Service Docker image
+        env:
+          APP_UID: 1000 # Provide appropriate user ID
+        run: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_REGISTRY }}/product-service:${{ github.sha }}
+
+  deploy-api-gateway:
+    needs: build-api-gateway
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy API Gateway Docker image
+        env:
+          APP_UID: 1000 # Provide appropriate user ID
+        run: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_REGISTRY }}/amazingateaway:${{ github.sha }}
