@@ -14,7 +14,7 @@ jobs:
 
       - name: Build Product Service Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./APIGateaway/Product-Service
 
   build-api-gateway:
     runs-on: ubuntu-latest
