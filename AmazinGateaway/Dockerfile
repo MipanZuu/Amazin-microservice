@@ -7,7 +7,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["AmazinGateaway/AmazinGateaway.csproj", "AmazinGateaway/"]
+COPY ["AmazinGateaway/AmazinGateaway.csproj", "."]
 RUN dotnet restore "AmazinGateaway/AmazinGateaway.csproj"
 COPY . .
 WORKDIR "/src/AmazinGateaway"
