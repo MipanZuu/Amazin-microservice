@@ -22,6 +22,7 @@ jobs:
       - name: Build Product Service Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service ./Product-Service
+          docker tag ${{ secrets.DOCKER_USERNAME }}/product-service ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }}
           docker image ls
 
   build-api-gateway:
