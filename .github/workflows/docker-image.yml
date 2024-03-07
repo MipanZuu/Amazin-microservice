@@ -12,9 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up Docker BuildX
+        uses: docker/setup-buildx-action@v2
+        with:
+          driver-opts: |
+            image=moby/buildkit:v0.12.0
+          buildkitd-flags: --debug
+
       - name: Build Product Service Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./APIGateaway/Product-Service
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:${{ github.sha }} ./Product-Service
 
   build-api-gateway:
     runs-on: ubuntu-latest
