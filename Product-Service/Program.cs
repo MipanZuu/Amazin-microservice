@@ -25,7 +25,7 @@ app.UseStaticFiles();
 
 app.UseAuthorization();
 
-app.MapGet("/", () => "Hello, Denta, Welcome Back!");
+app.MapGet("/test", () => "Hello, Denta, Welcome Back!");
 app.MapControllers();
 
 app.MapControllerRoute(

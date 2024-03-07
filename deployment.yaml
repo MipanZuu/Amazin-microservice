@@ -37,13 +37,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: product-service
+  name: amazingateaway
 spec:
   selector:
     app.kubernetes.io/name: amazingateaway
   ports:
     - name: amazingateaway-port
       protocol: TCP
-      port: 8080
+      port: 8005
       targetPort: 80
   type: LoadBalancer
