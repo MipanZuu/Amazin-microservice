@@ -34,5 +34,3 @@ jobs:
       - name: Deploy with Docker Compose
         run: docker-compose -f docker-compose.yml up -d
         
-      - name: Recreate Container
-        run: docker-compose up --force-recreate
