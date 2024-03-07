@@ -3,8 +3,8 @@ version: "3.8"
 services:
   amazingateaway:
     build:
-      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway"
-      dockerfile: "AmazinGateaway/Dockerfile"
+      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway"
+      dockerfile: "Dockerfile"
       target: "base"
     command: []
     entrypoint:
@@ -22,8 +22,8 @@ services:
     working_dir: "/app"
   product-service:
     build:
-      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway"
-      dockerfile: "Product-Service/Dockerfile"
+      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service"
+      dockerfile: "Dockerfile"
       target: "base"
     command: []
     entrypoint:
