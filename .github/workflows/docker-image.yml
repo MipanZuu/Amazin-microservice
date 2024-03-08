@@ -8,15 +8,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        architecture: [arm64]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+        with:
+          architectures: ${{ matrix.architecture }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
       - name: Build and Push Product Service Docker image
         env:
           APP_UID: 1000
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:v1 ./Product-Service
+          docker buildx build --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/product-service:v1 ./Product-Service
           docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/product-service:v1
 
@@ -24,7 +35,7 @@ jobs:
         env:
           APP_UID: 1000
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:v1 ./AmazinGateaway
+          docker buildx build --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/amazingateaway:v1 ./AmazinGateaway
           docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin <<< ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/amazingateaway:v1
 
@@ -33,4 +44,3 @@ jobs:
 
       - name: Deploy with Docker Compose
         run: docker-compose -f docker-compose.yml up -d
-        

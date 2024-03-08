@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: product-service
   annotations:
-    kubernetes.io/change-cause: "Initional deployment of the app"
+    kubernetes.io/change-cause: "Initial deployment of the app"
 spec:
   replicas: 1
   selector:
@@ -11,18 +11,14 @@ spec:
       app: product-service
   template:
     metadata:
-      name: product-service-k8s
       labels:
-        env: prod
         app: product-service
-        app.kubernetes.io/name: product-service
     spec:
       containers:
         - name: product-service
           image: dentabramasta/product-service:v2
           ports:
             - containerPort: 80
-              name: http-web-api
           resources:
             requests:
               cpu: 100m
@@ -40,9 +36,52 @@ metadata:
   name: product-service
 spec:
   selector:
-    app.kubernetes.io/name: product-service
+    app: product-service
   ports:
-    - name: product-service-port
+    - name: http-web-api
+      protocol: TCP
+      port: 8081
+      targetPort: 80
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amazingateaway
+  annotations:
+    kubernetes.io/change-cause: "Initial deployment of the app"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amazingateaway
+  template:
+    metadata:
+      labels:
+        app: amazingateaway
+    spec:
+      containers:
+        - name: amazingateaway
+          image: dentabramasta/amazingateaway:v1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 200Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: amazingateaway
+spec:
+  selector:
+    app: amazingateaway
+  ports:
+    - name: http-web-api
       protocol: TCP
       port: 8080
       targetPort: 80
