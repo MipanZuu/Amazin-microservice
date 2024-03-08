@@ -24,8 +24,33 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Product/{id}"
-    }
+    },
+    
     // User API
+    {
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User"
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/{id}"
+    }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:800"

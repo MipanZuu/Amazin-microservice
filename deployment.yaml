@@ -11,14 +11,18 @@ spec:
       app: product-service
   template:
     metadata:
+      name: product-service-k8s
       labels:
+        env: prod
         app: product-service
+        app.kubernetes.io/name: product-service
     spec:
       containers:
         - name: product-service
-          image: dentabramasta/product-service:v2
+          image: dentabramasta/product-service:v1
           ports:
             - containerPort: 80
+              name: http-web-api
           resources:
             requests:
               cpu: 100m
@@ -36,13 +40,48 @@ metadata:
   name: product-service
 spec:
   selector:
-    app: product-service
+    app.kubernetes.io/name: product-service
   ports:
-    - name: http-web-api
+    - name: product-service-port
       protocol: TCP
       port: 8081
       targetPort: 80
   type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      name: mongodb
+      labels:
+        app: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo:latest
+          ports:
+            - containerPort: 27020
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 27020
+      targetPort: 27020
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -65,6 +104,9 @@ spec:
           image: dentabramasta/amazingateaway:v1
           ports:
             - containerPort: 80
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
           resources:
             requests:
               cpu: 100m
@@ -83,6 +125,5 @@ spec:
   ports:
     - name: http-web-api
       protocol: TCP
-      port: 8080
-      targetPort: 80
-  type: LoadBalancer
+      port: 8001
+      targetPort: 8080

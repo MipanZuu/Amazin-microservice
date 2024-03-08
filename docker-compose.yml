@@ -23,7 +23,7 @@
 #      - mongo-data:/data/db
 #    networks:
 #      - amazinnetwork
-#  
+#
 #  amazingateaway:
 #    container_name: amazingateaway
 #    image: amazingateaway
@@ -32,6 +32,17 @@
 #      dockerfile: AmazinGateaway/Dockerfile
 #    ports:
 #      - "8001:8080"
+#    networks:
+#      - amazinnetwork
+#  
+#  userservice:
+#    container_name: userservice
+#    image: userservice
+#    build:
+#      context: .
+#      dockerfile: UserService/Dockerfile
+#    ports:
+#      - "8002:80"
 #    networks:
 #      - amazinnetwork
 #
@@ -69,7 +80,7 @@ services:
       - mongo-data:/data/db
     networks:
       - amazinnetwork
-  
+
   amazingateaway:
     container_name: amazingateaway
     image: dentabramasta/amazingateaway:v1
@@ -78,6 +89,17 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8001:8080"
+    networks:
+      - amazinnetwork
+  
+  userservice:
+    container_name: userservice
+    image: dentabramasta/userservice:v1
+    build:
+      context: ./User-Service
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8080"
     networks:
       - amazinnetwork
 

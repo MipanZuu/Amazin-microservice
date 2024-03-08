@@ -40,3 +40,23 @@ services:
     - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service:/app:rw"
     - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway:/src:rw"
     working_dir: "/app"
+  userservice:
+    build:
+      context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/User-Service.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/User-Service.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "dentabramasta/userservice:dev"
+    ports: []
+    volumes:
+    - "/Users/dentabramasta/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service:/app:rw"
+    - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway:/src:rw"
+    working_dir: "/app"
