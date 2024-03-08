@@ -53,7 +53,7 @@ services:
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/User-Service.staticwebassets.runtime.CT.json"
       DOTNET_USE_POLLING_FILE_WATCHER: "true"
-    image: "dentabramasta/userservice:dev"
+    image: "dentabramasta/user-service:dev"
     ports: []
     volumes:
     - "/Users/dentabramasta/.nuget/packages:/home/app/.nuget/packages"

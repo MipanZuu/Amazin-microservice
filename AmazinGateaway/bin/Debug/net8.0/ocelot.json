@@ -34,7 +34,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "user-service",
-          "Port": 8080
+          "Port": 80
         }
       ],
       "DownstreamPathTemplate": "/api/User"
@@ -46,13 +46,13 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "user-service",
-          "Port": 8080
+          "Port": 80
         }
       ],
       "DownstreamPathTemplate": "/api/User/{id}"
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:800"
+    "BaseUrl": "http://localhost:80"
   }
 }

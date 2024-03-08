@@ -81,6 +81,18 @@ services:
     networks:
       - amazinnetwork
 
+  mongouserservice: 
+    image: mongo:latest
+    restart: unless-stopped
+    container_name: mongouserservice
+    ports:
+      - "27021:27021"
+    command: ["mongod", "--port", "27021"]
+    volumes:
+      - mongouserservice-data:/data/db
+    networks:
+      - amazinnetwork
+
   amazingateaway:
     container_name: amazingateaway
     image: dentabramasta/amazingateaway:v1
@@ -93,13 +105,13 @@ services:
       - amazinnetwork
   
   userservice:
-    container_name: userservice
-    image: dentabramasta/userservice:v1
+    container_name: user-service
+    image: dentabramasta/user-service:v1
     build:
       context: ./User-Service
       dockerfile: Dockerfile
-    ports:
-      - "8002:8080"
+    depends_on:
+      - mongouserservice
     networks:
       - amazinnetwork
 
@@ -109,4 +121,4 @@ networks:
 
 volumes:
   mongo-data:
-
+  mongouserservice-data:
