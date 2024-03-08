@@ -104,7 +104,7 @@ services:
     networks:
       - amazinnetwork
   
-  userservice:
+  user-service:
     container_name: user-service
     image: dentabramasta/user-service:v1
     build:

@@ -40,7 +40,7 @@ services:
     - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service:/app:rw"
     - "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway:/src:rw"
     working_dir: "/app"
-  userservice:
+  user-service:
     build:
       context: "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service"
       dockerfile: "Dockerfile"
