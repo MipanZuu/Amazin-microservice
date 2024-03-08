@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmazinGateaway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4ce996be5a12b65c7bc28ed73e0b04be1b74aae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a84dc4e7f89e23376e4fef50604b3a0dc8805316")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmazinGateaway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmazinGateaway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
