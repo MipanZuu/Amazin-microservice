@@ -62,3 +62,28 @@ jobs:
 
       - name: Test
         run: dotnet test --configuration Release
+    
+  sonarqube:
+    runs-on: ubuntu-latest
+    needs: testing
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup SonarQube Scanner
+        uses: sonarsource/sonarqube-scan-action@v1
+        with:
+          sonar-url: ${{ secrets.SONAR_HOST_URL }}
+          sonar-login: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Run SonarQube analysis
+        run: dotnet sonarscanner begin /k:"your_project_key" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" /d:sonar.cs.dotcover.reportsPaths="**/*.dotcover"
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Test
+        run: dotnet test --configuration Release
+
+      - name: End SonarQube analysis
+        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
