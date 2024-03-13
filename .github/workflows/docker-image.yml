@@ -108,11 +108,10 @@ jobs:
       - name: Print current working directory
         run: pwd
 
-# Analysis Still Error
       - name: Build and analyze sonar
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: http://localhost:9000
+          SONAR_HOST_URL: http://192.168.1.100:9000
         run: |
           .sonar/scanner/dotnet-sonarscanner begin /k:"Amazin" /d:sonar.token="${SONAR_TOKEN}" /d:sonar.host.url="${SONAR_HOST_URL}"
           dotnet build
