@@ -108,6 +108,7 @@ jobs:
       - name: Print current working directory
         run: pwd
 
+#Analysis
       - name: Build and analyze sonar
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
