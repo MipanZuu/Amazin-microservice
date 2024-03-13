@@ -101,6 +101,12 @@ jobs:
         run: |
           mkdir -p .sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path .sonar/scanner
+          
+      - name: List contents of .sonar/scanner directory
+        run: ls -R .sonar/scanner
+
+      - name: Print current working directory
+        run: pwd
 
       - name: Build and analyze sonar
         env:
@@ -110,10 +116,3 @@ jobs:
           dotnet-sonarscanner begin /k:"Amazin" /d:sonar.token="${SONAR_TOKEN}" /d:sonar.host.url="${SONAR_HOST_URL}"
           dotnet build
           dotnet-sonarscanner end /d:sonar.token="${SONAR_TOKEN}"
-      
-      
-      - name: List contents of .sonar/scanner directory
-        run: ls -R .sonar/scanner
-        
-      - name: Print current working directory
-        run: pwd
