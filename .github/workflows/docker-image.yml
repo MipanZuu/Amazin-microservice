@@ -113,3 +113,9 @@ jobs:
             -Dsonar.projectKey="Amazin" \
             -Dsonar.sources="." \
             -Dsonar.language="cs"
+          
+      - name: List contents of .sonar/scanner directory
+        run: ls -R .sonar/scanner
+        
+      - name: Print current working directory
+        run: pwd
