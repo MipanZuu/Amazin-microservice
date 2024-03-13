@@ -99,7 +99,7 @@ jobs:
           mkdir -p .sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path .sonar/scanner
 
-      - name: Build and analyze
+      - name: Build and analyze sonar
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
