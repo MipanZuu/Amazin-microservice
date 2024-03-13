@@ -107,6 +107,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          .sonar/scanner/dotnet sonarscanner begin /k:"Amazin" /d:sonar.token="${SONAR_TOKEN}" /d:sonar.host.url="${SONAR_HOST_URL}"
-          dotnet build
-          .sonar/scanner/dotnet sonarscanner end /d:sonar.token="${SONAR_TOKEN}"
+          .sonar/scanner/sonar-scanner-4.6.2.2472/bin/sonar-scanner \
+            -Dsonar.login="${SONAR_TOKEN}" \
+            -Dsonar.host.url="${SONAR_HOST_URL}" \
+            -Dsonar.projectKey="Amazin" \
+            -Dsonar.sources="." \
+            -Dsonar.language="cs"
