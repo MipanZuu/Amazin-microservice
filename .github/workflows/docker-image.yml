@@ -77,10 +77,10 @@ jobs:
           sonar-login: ${{ secrets.SONAR_TOKEN }}
 
       - name: Run SonarQube analysis
-        run: dotnet sonarscanner begin /k:"your_project_key" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" /d:sonar.cs.dotcover.reportsPaths="**/*.dotcover"
+        run: .\.sonar\scanner\dotnet-sonarscanner begin /k:"Amazin" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
 
       - name: Build
-        run: dotnet build --configuration Release
+        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
       - name: Test
         run: dotnet test --configuration Release
