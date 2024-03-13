@@ -9,7 +9,6 @@ jobs:
 # Testing
   testing:
     runs-on: ubuntu-latest
-    needs: build-and-deploy
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -31,6 +30,7 @@ jobs:
 # Build and Deploy
   build-and-deploy:
     runs-on: ubuntu-latest
+    needs: testing
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -107,13 +107,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          .sonar/scanner/sonar-scanner-4.6.2.2472/bin/sonar-scanner \
-            -Dsonar.login="${SONAR_TOKEN}" \
-            -Dsonar.host.url="${SONAR_HOST_URL}" \
-            -Dsonar.projectKey="Amazin" \
-            -Dsonar.sources="." \
-            -Dsonar.language="cs"
-          
+          dotnet-sonarscanner begin /k:"Amazin" /d:sonar.token="${SONAR_TOKEN}" /d:sonar.host.url="${SONAR_HOST_URL}"
+          dotnet build
+          dotnet-sonarscanner end /d:sonar.token="${SONAR_TOKEN}"
+      
+      
       - name: List contents of .sonar/scanner directory
         run: ls -R .sonar/scanner
         
