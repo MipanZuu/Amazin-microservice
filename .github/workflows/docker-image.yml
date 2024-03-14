@@ -67,15 +67,17 @@ jobs:
 
 # SonarQube
   sonarcloud:
-    name: SonarCloud
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+      - name: SonarScanner for .NET 8 with pull request decoration support
+        uses: highbyte/sonarscan-dotnet@v2.3.2
         with:
-          fetch-depth: 0
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: "Amazin"
-          SONAR_ORGANIZATION: "Amazin"
+            # The key of the SonarQube project
+            sonarProjectKey: your_projectkey
+            # The name of the SonarQube project
+            sonarProjectName:  your_projectname
+            # The name of the SonarQube organization in SonarCloud. For hosted SonarQube, skip this setting.
+            sonarOrganization: your_organization
+
+  env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
