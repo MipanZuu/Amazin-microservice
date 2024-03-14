@@ -110,7 +110,7 @@ jobs:
           echo "SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}"
           echo "SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}"
           
-#Analysis
+#Analysis sonar
       - name: Build and analyze sonar
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
