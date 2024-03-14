@@ -66,51 +66,16 @@ jobs:
         run: docker-compose -f docker-compose.yml up -d
 
 # SonarQube
-  Sonarqube:
-    name: Build and Analyze
-    needs: testing
+  sonarqube:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
         with:
-          dotnet-version: '8.0' # Change this to match your .NET version
-
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
-      - name: Cache SonarQube packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-
-      - name: Cache SonarQube scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v2
-        with:
-          path: .sonar/scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
-
-      - name: Install SonarQube scanner
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        run: |
-          mkdir -p .sonar/scanner
-          dotnet tool install dotnet-sonarscanner --tool-path .sonar/scanner
-          
-#Analysis
-      - name: Build and analyze sonar
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: |
-          .sonar/scanner/dotnet-sonarscanner begin /k:"Amazin" -d:sonar.token="${SONAR_TOKEN}" /d:sonar.host.url="${SONAR_HOST_URL}"
-          dotnet build
-          .sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${SONAR_TOKEN}"
+          token: ${{ secrets.SONAR_TOKEN }}
+          url: ${{ secrets.SONAR_HOST_URL }}
+          options: '-Dsonar.projectKey=Amazin'
