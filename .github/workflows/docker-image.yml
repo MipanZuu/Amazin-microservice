@@ -66,55 +66,30 @@ jobs:
         run: docker-compose -f docker-compose.yml up -d
 
 # SonarQube
-  Sonarqube:
-    name: Build and Analyze
-    needs: testing
-    runs-on: ubuntu-latest
+  sonarqube:
+    runs-on: macos-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
         with:
-          fetch-depth: 0
+          dotnet-version: '8.0' # Change this to match your .NET version
 
-      - name: Install JDK 17
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '17'
+      - name: Restore dependencies
+        run: dotnet restore
 
-      - name: Cache SonarQube packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
 
-      - name: Cache SonarQube scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v2
-        with:
-          path: .sonar/scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: SonarQube Scan
+        run: dotnet sonarscanner begin /k:"your_project_key" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="http://localhost:9000" /d:sonar.cs.opencover.reportsPaths="coverage.opencover.xml" # Adjust project key and coverage report path accordingly
 
-      - name: Install SonarQube scanner
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        run: |
-          mkdir -p .sonar/scanner
-          dotnet tool install dotnet-sonarscanner --tool-path .sonar/scanner
-          
-#      - name: List contents of .sonar/scanner directory
-#        run: ls -R .sonar/scanner
-#
-#      - name: Print current working directory
-#        run: pwd
+      - name: Test
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 
-#Analysis
-      - name: Build and analyze sonar
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: |
-          .sonar/scanner/dotnet-sonarscanner begin /k:"Amazin" -D:sonar.token="${SONAR_TOKEN}" -D:sonar.host.url="${SONAR_HOST_URL}"
-          dotnet build
-          .sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${SONAR_TOKEN}"
+      - name: SonarQube End
+        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
