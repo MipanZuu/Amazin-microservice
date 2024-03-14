@@ -114,7 +114,7 @@ jobs:
       - name: Build and analyze sonar
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: 192.168.64.1:9000
+          SONAR_HOST_URL: "http://192.168.64.1:9000"
         run: |
           .sonar/scanner/dotnet-sonarscanner begin /k:"Amazin" -d:sonar.token="${SONAR_TOKEN}" /d:sonar.host.url="${SONAR_HOST_URL}"
           dotnet build
