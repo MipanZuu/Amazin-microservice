@@ -1,0 +1,10 @@
+ä
+/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/Debug/net8.0/Product-Service.AssemblyInfo.csutf-8ö
+é/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8ç
+Å/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/Debug/net8.0/Product-Service.GlobalUsings.g.csutf-8r
+i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Services/ProductService.csutf-8b
+Y/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Program.csutf-8n
+e/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Models/ProductModel.csutf-8x
+o/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/ProductController.csutf-8{
+r/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/HelloWorldController.csutf-8z
+q/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Configurations/DatabaseSettings.csutf-8
