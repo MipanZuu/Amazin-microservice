@@ -218,6 +218,9 @@
           }
         }
       },
+      "SonarAnalyzer.CSharp/9.21.0.86780": {
+        "type": "package"
+      },
       "Swashbuckle.AspNetCore/6.4.0": {
         "type": "package",
         "dependencies": {
@@ -843,6 +846,26 @@
         "ocelot.nuspec"
       ]
     },
+    "SonarAnalyzer.CSharp/9.21.0.86780": {
+      "sha512": "m+0RKlTMGDLKH8zDwGqWtvVVbY7leuDWNjcGDqEtvI12lR0fQtmPV8eooMyaA76QxUxRnbIMmilwqba1lXMvJQ==",
+      "type": "package",
+      "path": "sonaranalyzer.csharp/9.21.0.86780",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/Google.Protobuf.dll",
+        "analyzers/SonarAnalyzer.CFG.dll",
+        "analyzers/SonarAnalyzer.CSharp.dll",
+        "analyzers/SonarAnalyzer.dll",
+        "images/sonarsource_64.png",
+        "license/THIRD-PARTY-NOTICES.txt",
+        "sonaranalyzer.csharp.9.21.0.86780.nupkg.sha512",
+        "sonaranalyzer.csharp.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "sha512": "eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
       "type": "package",
@@ -955,6 +978,7 @@
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
       "Ocelot >= 23.1.0",
+      "SonarAnalyzer.CSharp >= 9.21.0.86780",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -1002,6 +1026,12 @@
           "Ocelot": {
             "target": "Package",
             "version": "[23.1.0, )"
+          },
+          "SonarAnalyzer.CSharp": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.21.0.86780, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

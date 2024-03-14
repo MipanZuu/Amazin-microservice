@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w10zVCZIbmxdBIHkNQYgEyEoqIyV0VYlG6vtbEzQfZmbV6Wow5UcI2Qk7aKqQJOaa9Wdo2Wc6nk4JeZaU9uVCg==",
+  "dgSpecHash": "XGrEnzlwE4vz8M2Kw+nvZvYBxfFJWcnsDXXtOTQ4a/O36LbWPDp4g8v8/HwMd4SdVQItR5SWdpz8YErcI2jOMw==",
   "success": true,
   "projectFilePath": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "/Users/dentabramasta/.nuget/packages/mongodb.libmongocrypt/1.8.2/mongodb.libmongocrypt.1.8.2.nupkg.sha512",
     "/Users/dentabramasta/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
     "/Users/dentabramasta/.nuget/packages/snappier/1.0.0/snappier.1.0.0.nupkg.sha512",
+    "/Users/dentabramasta/.nuget/packages/sonaranalyzer.csharp/9.21.0.86780/sonaranalyzer.csharp.9.21.0.86780.nupkg.sha512",
     "/Users/dentabramasta/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/dentabramasta/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
     "/Users/dentabramasta/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",

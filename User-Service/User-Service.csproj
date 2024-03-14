@@ -16,6 +16,10 @@
 
     <ItemGroup>
       <PackageReference Include="MongoDB.Driver" Version="2.24.0" />
+      <PackageReference Include="SonarAnalyzer.CSharp" Version="9.21.0.86780">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
     </ItemGroup>
 
 </Project>
