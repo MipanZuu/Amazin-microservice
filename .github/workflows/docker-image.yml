@@ -98,18 +98,20 @@ jobs:
 
       - name: Install SonarQube scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
         run: |
           mkdir -p .sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path .sonar/scanner
           
-      - name: List contents of .sonar/scanner directory
-        run: ls -R .sonar/scanner
-
-      - name: Print current working directory
-        run: pwd
+#      - name: List contents of .sonar/scanner directory
+#        run: ls -R .sonar/scanner
+#
+#      - name: Print current working directory
+#        run: pwd
 
 #Analysis
       - name: Build and analyze sonar
+        shell: powershell
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
