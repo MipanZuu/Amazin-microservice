@@ -85,7 +85,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: SonarQube Scan
-        run: dotnet sonarscanner begin /k:"your_project_key" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="http://localhost:9000" /d:sonar.cs.opencover.reportsPaths="coverage.opencover.xml" # Adjust project key and coverage report path accordingly
+        run: dotnet sonarscanner begin /k:"Amazin" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="http://localhost:9000" /d:sonar.cs.opencover.reportsPaths="coverage.opencover.xml" # Adjust project key and coverage report path accordingly
 
       - name: Test
         run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
