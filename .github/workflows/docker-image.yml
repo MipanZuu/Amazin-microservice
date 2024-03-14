@@ -77,6 +77,8 @@ jobs:
           sonarProjectKey: Amazin
           # The name of the SonarQube project
           sonarProjectName:  Amazin
+          # The name of the SonarQube organization in SonarCloud. For hosted SonarQube, skip this setting.
+          sonarOrganization: Amazin
     env:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
