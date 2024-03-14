@@ -18,12 +18,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Controllers/UserController.cs",
+                "uri": "file:///Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/ProductController.cs",
                 "region": {
-                  "startLine": 28,
+                  "startLine": 29,
                   "startColumn": 13,
-                  "endLine": 28,
-                  "endColumn": 24
+                  "endLine": 29,
+                  "endColumn": 30
                 }
               }
             }

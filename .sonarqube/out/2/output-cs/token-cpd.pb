@@ -1,14 +1,14 @@
- 
-c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Services/UserService.cs
-	namespace 	
-User_Service
- 
-. 
-Services 
-;  
+å
+i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Services/ProductService.cs
+	namespace 	
+Product_Service
+ 
+. 
+Services "
+;" #
 public 
-class 
-UserService 
+class 
+ProductService 
 {		 
 private
 
@@ -21,29 +21,29 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
  %
 <
 
-% &
-	UserModel
+% &
+ProductModel
 
-& /
+& 2
 >
 
-/ 0
-_userCollection
+2 3
+_productCollection
 
-1 @
+4 F
 ;
 
-@ A
+F G
 public 
-
-UserService 
-( 
-IOptions 
-<  
-DatabaseSettings  0
->0 1
-databaseSettings2 B
-)B C
+
+ProductService 
+( 
+IOptions "
+<" #
+DatabaseSettings# 3
+>3 4
+databaseSettings5 E
+)E F
 { 
 var 
 mongoClient 
@@ -71,23 +71,23 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
 .D E
 DatabaseNameE Q
 )Q R
-;R S
-_userCollection 
-= 
-mongoDb !
-.! "
-GetCollection" /
-</ 0
-	UserModel0 9
->9 :
-(: ;
-databaseSettings; K
-.K L
-ValueL Q
-.Q R
-CollectionNameR `
-)` a
-;a b
+;R S
+_productCollection 
+= 
+mongoDb $
+.$ %
+GetCollection% 2
+<2 3
+ProductModel3 ?
+>? @
+(@ A
+databaseSettingsA Q
+.Q R
+ValueR W
+.W X
+CollectionNameX f
+)f g
+;g h
 } 
 public 
 
@@ -95,105 +95,105 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
 Task 
 < 
 List 
-< 
-	UserModel $
->$ %
->% &
-GetAsync' /
-(/ 0
-)0 1
-=>2 4
-await5 :
-_userCollection; J
-.J K
-FindK O
-(O P
-_P Q
-=>R T
-trueU Y
-)Y Z
-.Z [
-ToListAsync[ f
-(f g
-)g h
-;h i
+< 
+ProductModel '
+>' (
+>( )
+GetAsync* 2
+(2 3
+)3 4
+=>5 7
+await8 =
+_productCollection> P
+.P Q
+FindQ U
+(U V
+_V W
+=>X Z
+true[ _
+)_ `
+.` a
+ToListAsynca l
+(l m
+)m n
+;n o
 public 
 
 async 
 Task 
-< 
-	UserModel 
->  
-GetAsync! )
-() *
-string* 0
-id1 3
-)3 4
-=>5 7
-await 
-_userCollection 
-. 
-Find "
-(" #
-x# $
-=>% '
-x( )
-.) *
-Id* ,
-==- /
-id0 2
-)2 3
-.3 4
-FirstOrDefaultAsync4 G
-(G H
-)H I
-;I J
+< 
+ProductModel "
+>" #
+GetAsync$ ,
+(, -
+string- 3
+id4 6
+)6 7
+=>8 :
+await 
+_productCollection  
+.  !
+Find! %
+(% &
+x& '
+=>( *
+x+ ,
+., -
+Id- /
+==0 2
+id3 5
+)5 6
+.6 7
+FirstOrDefaultAsync7 J
+(J K
+)K L
+;L M
 public 
 
 async 
 Task 
 CreateAsync !
-(! "
-	UserModel" +
-	userModel, 5
-)5 6
-=>7 9
-await: ?
-_userCollection@ O
-.O P
-InsertOneAsyncP ^
-(^ _
-	userModel_ h
-)h i
-;i j
+(! "
+ProductModel" .
+productModel/ ;
+); <
+=>= ?
+await@ E
+_productCollectionF X
+.X Y
+InsertOneAsyncY g
+(g h
+productModelh t
+)t u
+;u v
 public 
 
 async 
 Task 
 UpdateAsync !
-(! "
-	UserModel" +
-	userModel, 5
-)5 6
-=>7 9
-await 
-_userCollection 
-. 
-ReplaceOneAsync -
-(- .
-x. /
-=>0 2
-x3 4
-.4 5
-Id5 7
-==8 :
-	userModel; D
-.D E
-IdE G
-,G H
-	userModelI R
-)R S
-;S T
+(! "
+ProductModel" .
+productModel/ ;
+); <
+=>= ?
+await 
+_productCollection  
+.  !
+ReplaceOneAsync! 0
+(0 1
+x1 2
+=>3 5
+x6 7
+.7 8
+Id8 :
+==; =
+productModel> J
+.J K
+IdK M
+,M N
+productModelO [
+)[ \
+;\ ]
 public 
 
 async 
@@ -204,22 +204,22 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
 id) +
 )+ ,
 =>- /
-await0 5
-_userCollection6 E
-.E F
-DeleteOneAsyncF T
-(T U
-xU V
-=>W Y
-xZ [
-.[ \
-Id\ ^
-==_ a
-idb d
-)d e
-;e f
-} ¯
-V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Program.cs
+await0 5
+_productCollection6 H
+.H I
+DeleteOneAsyncI W
+(W X
+xX Y
+=>Z \
+x] ^
+.^ _
+Id_ a
+==b d
+ide g
+)g h
+;h i
+} µ
+Y/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Program.cs
 var 
 builder 
 = 
@@ -230,37 +230,37 @@ V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Pro
 args+ /
 )/ 0
 ;0 1
-builder 
-. 
-Services 
-. 
-	Configure 
-< 
-DatabaseSettings +
->+ ,
-(, -
-builder- 4
-.4 5
-Configuration5 B
-.B C
+builder 
+. 
+Services 
+. 
+	Configure 
+< 
+DatabaseSettings +
+>+ ,
+(, -
+builder- 4
+.4 5
+Configuration5 B
+.B C
 
-GetSectionC M
-(M N
-$strN ]
-)] ^
-)^ _
-;_ `
+GetSectionC M
+(M N
+$strN ]
+)] ^
+)^ _
+;_ `
 builder		 
 .		 
 Services		 
 .		 
 AddSingleton		 
-<		 
-UserService		 )
->		) *
-(		* +
-)		+ ,
-;		, -
+<		 
+ProductService		 ,
+>		, -
+(		- .
+)		. /
+;		/ 0
 builder 
 . 
 Services 
@@ -363,435 +363,473 @@ GetSectionC M
 (## 
 )## 	
 ;##	 
-†
-
-_/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.cs
-	namespace 	
-User_Service
- 
-. 
-Models 
-; 
-public 
-class 
-	UserModel 
-{ 
-[ 
-BsonId 
-] 
-[ 
-BsonRepresentation 
-( 
-BsonType  
-.  !
-ObjectId! )
-)) *
-]* +
-public 
-
-string 
-? 
-Id 
-{ 
-get 
-; 
-set 
-;  
-}! "
-[
-
- 
-BsonElement
-
- 
-(
-
- 
-$str
-
- 
-)
-
- 
-]
-
- 
+’
+e/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Models/ProductModel.cs
+	namespace 	
+Product_Service
+ 
+. 
+Models  
+;  !
+public 
+class 
+ProductModel 
+{ 
+[ 
+BsonId 
+] 
+[		 
+BsonRepresentation		 
+(		 
+BsonType		  
+.		  !
+ObjectId		! )
+)		) *
+]		* +
 public
 
-  
+ 
+
 string
 
-! '
-Name
+ 
+?
 
-( ,
+ 
+Id
+
+ 
 {
 
-- .
+ 
 get
 
-/ 2
+ 
 ;
 
-2 3
+ 
 set
 
-4 7
+ 
 ;
 
-7 8
+  
 }
 
-9 :
-=
-
-; <
-null
-
-= A
-!
-
-A B
-;
-
-B C
+! "
 [ 
 BsonElement 
 ( 
-$str 
-) 
-] 
-public $
-string% +
-Username, 4
-{5 6
-get7 :
-;: ;
-set< ?
-;? @
-}A B
-=C D
-nullE I
-!I J
-;J K
-} Ç)
-i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Controllers/UserController.cs
-	namespace 	
-User_Service
- 
-. 
-Controllers "
-;" #
-[ 
-ApiController 
-] 
-[ 
-Route 
-( 
-$str 
-) 
-] 
-public		 
-class		 
-UserController		 
-:		 
-ControllerBase		 ,
-{
-
- 
-private 
-readonly 
-UserService  
-_userService! -
-;- .
-public 
-
-UserController 
-( 
-UserService %
-userService& 1
-)1 2
-=>3 5
-_userService6 B
-=C D
-userServiceE P
-;P Q
-[ 
-HttpGet 
-( 
-$str 
+$str 
+) 
+] 
+public  
+string! '
+Name( ,
+{- .
+get/ 2
+;2 3
+set4 7
+;7 8
+}9 :
+=; <
+null= A
+!A B
+;B C
+[ 
+BsonElement 
+( 
+$str 
 ) 
 ]  
-public 
+public! '
+string( .
+Description/ :
+{; <
+get= @
+;@ A
+setB E
+;E F
+}G H
+=I J
+nullK O
+!O P
+;P Q
+[ 
+BsonElement 
+( 
+$str 
+) 
+] 
+public 
+
+int 
+Price 
+{ 
+get 
+; 
+set 
+; 
+}  !
+} Ï*
+o/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/ProductController.cs
+	namespace 	
+Product_Service
+ 
+. 
+Controllers %
+;% &
+[ 
+ApiController 
+] 
+[		 
+Route		 
+(		 
+$str		 
+)		 
+]		 
+public
+
+ 
+class
+
+ 
+ProductController
+
+ 
+:
+
+  
+ControllerBase
+
+! /
+{ 
+private 
+readonly 
+ProductService #
+_productService$ 3
+;3 4
+public 
+
+ProductController 
+( 
+ProductService +
+productService, :
+): ;
+=>< >
+_productService? N
+=O P
+productServiceQ _
+;_ `
+[ 
+HttpGet 
+( 
+$str 
+) 
+]  
+public 
 
-async 
-Task 
-< 
-IActionResult #
-># $
-Get% (
-(( )
-string) /
-id0 2
-)2 3
-{ 
-var 
-existingUser 
-= 
-await  
-_userService! -
-.- .
-GetAsync. 6
-(6 7
-id7 9
-)9 :
-;: ;
-if 
+async 
+Task 
+< 
+IActionResult #
+># $
+Get% (
+(( )
+string) /
+id0 2
+)2 3
+{ 
+var 
+existingProduct 
+= 
+await #
+_productService$ 3
+.3 4
+GetAsync4 <
+(< =
+id= ?
+)? @
+;@ A
+if 
 
-( 
-existingUser 
-is 
-null  
-)  !
-return 
-NotFound 
-( 
-) 
-; 
-return 
-Ok 
-( 
-existingUser 
-) 
-;  
-} 
-[ 
-HttpGet 
-] 
-public 
+( 
+existingProduct 
+is 
+null #
+)# $
+return 
+NotFound 
+( 
+) 
+; 
+return 
+Ok 
+( 
+existingProduct !
+)! "
+;" #
+} 
+[ 
+HttpGet 
+] 
+public 
 
-async 
-Task 
-< 
-IActionResult #
-># $
-
-GetAllUser% /
-(/ 0
-)0 1
-{ 
-var 
-users 
-= 
-await 
-_userService &
-.& '
-GetAsync' /
-(/ 0
-)0 1
-;1 2
-if 
+async 
+Task 
+< 
+IActionResult #
+># $
+GetAllProducts% 3
+(3 4
+)4 5
+{ 
+var 
+allProducts 
+= 
+await 
+_productService  /
+./ 0
+GetAsync0 8
+(8 9
+)9 :
+;: ;
+if 
 
-( 
-users 
-. 
-Any 
-( 
-) 
-) 
-return 
-Ok 
-( 
-users 
-) 
-; 
-return 
-NotFound 
-( 
-) 
-; 
-}   
-[## 
-HttpPost## 
-]## 
-public$$ 
+( 
+allProducts 
+. 
+Any 
+( 
+) 
+) 
+return 
+Ok 
+( 
+allProducts !
+)! "
+;" #
+return   
+NotFound   
+(   
+)   
+;   
+}!! 
+[$$ 
+HttpPost$$ 
+]$$ 
+public%% 
 
-async$$ 
-Task$$ 
-<$$ 
-IActionResult$$ #
->$$# $
-PostUser$$% -
-($$- .
-	UserModel$$. 7
-	userModel$$8 A
-)$$A B
-{%% 
-await&& 
-_userService&& 
-.&& 
-CreateAsync&& &
-(&&& '
-	userModel&&' 0
-)&&0 1
-;&&1 2
-return'' 
-CreatedAtAction'' 
-('' 
-nameof'' %
-(''% &
-Get''& )
-)'') *
-,''* +
-new'', /
-{''0 1
-id''2 4
-=''5 6
-	userModel''7 @
-.''@ A
-Id''A C
-}''D E
-,''E F
-	userModel''G P
-)''P Q
-;''Q R
-}(( 
-[** 
-HttpPut** 
-(** 
-$str** 
-)** 
-]**  
-public++ 
+async%% 
+Task%% 
+<%% 
+IActionResult%% #
+>%%# $
+PostProduct%%% 0
+(%%0 1
+ProductModel%%1 =
+productModel%%> J
+)%%J K
+{&& 
+await'' 
+_productService'' 
+.'' 
+CreateAsync'' )
+('') *
+productModel''* 6
+)''6 7
+;''7 8
+return(( 
+CreatedAtAction(( 
+((( 
+nameof(( %
+(((% &
+Get((& )
+)(() *
+,((* +
+new((, /
+{((0 1
+id((2 4
+=((5 6
+productModel((7 C
+.((C D
+Id((D F
+}((G H
+,((H I
+productModel((J V
+)((V W
+;((W X
+})) 
+[++ 
+HttpPut++ 
+(++ 
+$str++ 
+)++ 
+]++  
+public,, 
 
-async++ 
-Task++ 
-<++ 
-IActionResult++ #
->++# $
-
-UpdateUser++% /
-(++/ 0
-String++0 6
-id++7 9
-,++9 :
-	UserModel++; D
-	userModel++E N
-)++N O
-{,, 
-var-- 
-existingUser-- 
-=-- 
-await--  
-_userService--! -
-.--- .
-GetAsync--. 6
-(--6 7
-id--7 9
-)--9 :
-;--: ;
-if.. 
+async,, 
+Task,, 
+<,, 
+IActionResult,, #
+>,,# $
+UpdateProduct,,% 2
+(,,2 3
+String,,3 9
+id,,: <
+,,,< =
+ProductModel,,> J
+productModel,,K W
+),,W X
+{-- 
+var.. 
+existingProduct.. 
+=.. 
+await.. #
+_productService..$ 3
+...3 4
+GetAsync..4 <
+(..< =
+id..= ?
+)..? @
+;..@ A
+if// 
 
-(.. 
-existingUser.. 
-is.. 
-null..  
-)..  !
-return// 
+(// 
+existingProduct// 
+is// 
+null// #
+)//# $
+return00 
 
-BadRequest// 
-(// 
-)// 
-;//  
-	userModel11 
-.11 
-Id11 
-=11 
-existingUser11 #
-.11# $
-Id11$ &
-;11& '
-await33 
-_userService33 
-.33 
-UpdateAsync33 &
-(33& '
-	userModel33' 0
-)330 1
-;331 2
-return44 
-Ok44 
-(44 
-)44 
-;44 
-}55 
-[77 
+BadRequest00 
+(00 
+)00 
+;00  
+productModel22 
+.22 
+Id22 
+=22 
+existingProduct22 )
+.22) *
+Id22* ,
+;22, -
+await44 
+_productService44 
+.44 
+UpdateAsync44 )
+(44) *
+productModel44* 6
+)446 7
+;447 8
+return55 
+Ok55 
+(55 
+)55 
+;55 
+}66 
+[88 
 
-HttpDelete77 
-(77 
-$str77 !
-)77! "
-]77" #
-public88 
+HttpDelete88 
+(88 
+$str88 !
+)88! "
+]88" #
+public99 
 
-async88 
-Task88 
-<88 
-IActionResult88 #
->88# $
-
-DeleteUser88% /
-(88/ 0
-String880 6
-id887 9
-)889 :
-{99 
-var:: 
-existingUser:: 
-=:: 
-await::  
-_userService::! -
-.::- .
-GetAsync::. 6
-(::6 7
-id::7 9
-)::9 :
-;::: ;
-if;; 
+async99 
+Task99 
+<99 
+IActionResult99 #
+>99# $
+DeleteProduct99% 2
+(992 3
+String993 9
+id99: <
+)99< =
+{:: 
+var;; 
+existingProduct;; 
+=;; 
+await;; #
+_productService;;$ 3
+.;;3 4
+GetAsync;;4 <
+(;;< =
+id;;= ?
+);;? @
+;;;@ A
+if<< 
 
-(;; 
-existingUser;; 
-is;; 
-null;;  
-);;  !
-return<< 
+(<< 
+existingProduct<< 
+is<< 
+null<< #
+)<<# $
+return== 
 
-BadRequest<< 
-(<< 
-)<< 
-;<<  
-await>> 
-_userService>> 
-.>> 
-RemoveAsync>> &
-(>>& '
-id>>' )
-)>>) *
-;>>* +
-return@@ 
-	NoContent@@ 
-(@@ 
-)@@ 
-;@@ 
-}AA 
-}CC ×
-m/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Configuration/DatabaseSettings.cs
-	namespace 	
-User_Service
- 
-. 
-Configuration $
-;$ %
+BadRequest== 
+(== 
+)== 
+;==  
+await?? 
+_productService?? 
+.?? 
+RemoveAsync?? )
+(??) *
+id??* ,
+)??, -
+;??- .
+returnAA 
+	NoContentAA 
+(AA 
+)AA 
+;AA 
+}BB 
+}CC ¬
+r/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/HelloWorldController.cs
+	namespace 	
+Product_Service
+ 
+. 
+Controllers %
+;% &
+public 
+class  
+HelloWorldController !
+{ 
+public 
+
+class 
+HomeController 
+:  !
+
+Controller" ,
+{ 
+public		 
+IActionResult		 
+Index		 "
+(		" #
+)		# $
+{
+
+ 	
+return 
+Content 
+( 
+$str 9
+)9 :
+;: ;
+} 	
+} 
+} ß
+q/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Configurations/DatabaseSettings.cs
+	namespace 	
+Product_Service
+ 
+. 
+Configurations (
+;( )
 public 
 class 
 DatabaseSettings 

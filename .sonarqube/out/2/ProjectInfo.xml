@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>User-Service</ProjectName>
+  <ProjectName>Product-Service</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>5e97a3c3-0ec0-431b-abe1-a778a7b30f1c</ProjectGuid>
-  <FullPath>/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/User-Service.csproj</FullPath>
+  <ProjectGuid>f822c634-d668-46f3-8cbc-936e68a93d93</ProjectGuid>
+  <FullPath>/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/.sonarqube/conf/2/FilesToAnalyze.txt" />
