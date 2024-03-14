@@ -72,12 +72,12 @@ jobs:
         uses: highbyte/sonarscan-dotnet@v2.3.2
         with:
             # The key of the SonarQube project
-            sonarProjectKey: your_projectkey
+            sonarProjectKey: Amazin
             # The name of the SonarQube project
-            sonarProjectName:  your_projectname
+            sonarProjectName:  Amazin
             # The name of the SonarQube organization in SonarCloud. For hosted SonarQube, skip this setting.
             sonarOrganization: your_organization
 
-  env:
-    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
