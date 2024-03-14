@@ -68,6 +68,7 @@ jobs:
 # SonarQube
   Sonarqube:
     name: Build and Analyze
+    needs: testing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
