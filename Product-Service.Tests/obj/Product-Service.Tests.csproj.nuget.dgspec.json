@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service.Tests/Product-Service.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service.Tests/Product-Service.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service.Tests/Product-Service.Tests.csproj",
+        "projectName": "Product-Service.Tests",
+        "projectPath": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service.Tests/Product-Service.Tests.csproj",
+        "packagesPath": "/Users/dentabramasta/.nuget/packages/",
+        "outputPath": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/dentabramasta/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj": {
+                "projectPath": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "JetBrains.Annotations": {
+              "target": "Package",
+              "version": "[2023.3.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.9.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.5.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/8.0.1/libexec/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj",
+        "projectName": "Product-Service",
+        "projectPath": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Product-Service.csproj",
+        "packagesPath": "/Users/dentabramasta/.nuget/packages/",
+        "outputPath": "/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dentabramasta/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.24.0, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.21.0.86780, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/8.0.1/libexec/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

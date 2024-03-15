@@ -1,0 +1,39 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=F822C634_002DD668_002D46F3_002D8CBC_002D936E68A93D93/@EntryIndexedValue">Product-Service.Tests</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=MSTest/@EntryIndexedValue">d6790ab7-33c2-4425-b2c9-51480cd1a852</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=xUnit/@EntryIndexedValue">33ff99d8-b1ad-4ed5-a4fd-376b97c2c841</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=34002f1c_002D9129_002D47ae_002Dbeab_002D67d7b4e41999/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_ReturnsNotFound_WhenProductDoesNotExist" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTest.Get_ReturnsNotFound_WhenProductDoesNotExist&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=521b8e8e_002Ddb7d_002D412a_002Dbf65_002D4177269d44a2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ProductControllerTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=57a3c0e7_002D35ed_002D47c1_002D9428_002D9370474a4215/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_ReturnsOk_WhenProductExists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTest.Get_ReturnsOk_WhenProductExists&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7f9a7c3e_002D457a_002D4bb4_002D9139_002Daff54a08d400/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Get_ReturnsNotFound_WhenProductDoesNotExist #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9c197f6e_002D1934_002D43d7_002Db851_002D241f24b7eaa6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_ReturnsNotFound_WhenProductDoesNotExist #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba30198f_002Df065_002D4e7b_002D9efc_002D2875111d90f5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_ReturnsNotFound_WhenProductDoesNotExist #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTest.Get_ReturnsNotFound_WhenProductDoesNotExist&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f8f9c04d_002Dfb81_002D49d5_002Dbac5_002D7c7dfbc75849/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ProductControllerTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::ECD4F2EE-3F90-4F06-A084-6D68EE20161A::net8.0::Product_Service.Tests.Controllers.ProductControllerTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
