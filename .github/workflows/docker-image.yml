@@ -67,7 +67,7 @@ jobs:
 
 # SonarQube
   Sonarqube:
-    name: Build
+    name: Sonarqube
     runs-on: windows-latest
     permissions: read-all
     steps:
