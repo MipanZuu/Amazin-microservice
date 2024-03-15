@@ -26,7 +26,7 @@ namespace Product_Service.Tests.Controllers
             // Assert
             Assert.IsType<NotFoundResult>(result);
         }
-
+        
         [Fact]
         public async Task Get_ReturnsOk_WhenProductExists()
         {
@@ -98,26 +98,6 @@ namespace Product_Service.Tests.Controllers
             Assert.Equal(nameof(ProductController.Get), result.ActionName);
             Assert.Equal(newProduct.Id, result.RouteValues["id"]);
             Assert.Equal(newProduct, result.Value);
-
-        }
-
-        [Fact]
-        public async Task UpdateProduct_ReturnsOk_WhenProductExists()
-        {
-            // Arrange
-            var existingProduct = new ProductModel { Id = "existingId", Name = "Product Name", Price = 1099 };
-            var updatedProduct = new ProductModel { Id = "existingId", Name = "Updated Product Name", Price = 2099 };
-            var productServiceMock = new Mock<IProductService>();
-            productServiceMock.Setup(x => x.GetAsync("existingId")).ReturnsAsync(existingProduct);
-            productServiceMock.Setup(x => x.UpdateAsync(It.IsAny<ProductModel>())).Returns(Task.CompletedTask);
-            var controller = new ProductController(productServiceMock.Object);
-
-            // Act
-            var result = await controller.UpdateProduct("existingId", updatedProduct);
-
-            // Assert
-            Assert.IsType<OkResult>(result);
-            productServiceMock.Verify(x => x.UpdateAsync(updatedProduct), Times.Once);
         }
 
         [Fact]
@@ -137,21 +117,21 @@ namespace Product_Service.Tests.Controllers
         }
 
         [Fact]
-        public async Task DeleteProduct_ReturnsNoContent_WhenProductExists()
+        public async Task UpdateProduct_ReturnsOk_WhenProductExists()
         {
             // Arrange
             var existingProduct = new ProductModel { Id = "existingId", Name = "Product Name", Price = 1099 };
+            var updatedProduct = new ProductModel { Id = "existingId", Name = "Updated Product Name", Price = 2099 };
             var productServiceMock = new Mock<IProductService>();
             productServiceMock.Setup(x => x.GetAsync("existingId")).ReturnsAsync(existingProduct);
-            productServiceMock.Setup(x => x.RemoveAsync(It.IsAny<string>())).Returns(Task.CompletedTask);
             var controller = new ProductController(productServiceMock.Object);
 
             // Act
-            var result = await controller.DeleteProduct("existingId");
+            var result = await controller.UpdateProduct("existingId", updatedProduct);
 
             // Assert
-            Assert.IsType<NoContentResult>(result);
-            productServiceMock.Verify(x => x.RemoveAsync("existingId"), Times.Once);
+            Assert.IsType<OkResult>(result);
+            productServiceMock.Verify(x => x.UpdateAsync(updatedProduct), Times.Once);
         }
 
         [Fact]
@@ -168,6 +148,23 @@ namespace Product_Service.Tests.Controllers
             // Assert
             Assert.IsType<BadRequestResult>(result);
             productServiceMock.Verify(x => x.RemoveAsync(It.IsAny<string>()), Times.Never);
+        }
+
+        [Fact]
+        public async Task DeleteProduct_ReturnsNoContent_WhenProductExists()
+        {
+            // Arrange
+            var existingProduct = new ProductModel { Id = "existingId", Name = "Product Name", Price = 1099 };
+            var productServiceMock = new Mock<IProductService>();
+            productServiceMock.Setup(x => x.GetAsync("existingId")).ReturnsAsync(existingProduct);
+            var controller = new ProductController(productServiceMock.Object);
+
+            // Act
+            var result = await controller.DeleteProduct("existingId");
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+            productServiceMock.Verify(x => x.RemoveAsync("existingId"), Times.Once);
         }
     }
 }

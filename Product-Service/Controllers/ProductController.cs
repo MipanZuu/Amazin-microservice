@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Product_Service.Models;
 using Product_Service.Services;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Product_Service.Controllers
 {

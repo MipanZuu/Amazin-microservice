@@ -12,41 +12,43 @@
       },
       "results": [
         {
-          "ruleId": "S5122",
-          "level": "warning",
-          "message": "Make sure this permissive CORS policy is safe here.",
+          "ruleId": "CA1860",
+          "level": "note",
+          "message": "Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/Program.cs",
+                "uri": "file:///Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/ProductController.cs",
                 "region": {
-                  "startLine": 13,
-                  "startColumn": 24,
-                  "endLine": 14,
-                  "endColumn": 22
+                  "startLine": 35,
+                  "startColumn": 17,
+                  "endLine": 35,
+                  "endColumn": 34
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1
+            "warningLevel": 1,
+            "customProperties": {
+              "DiagnosticPropertyKey": "Count"
+            }
           }
         }
       ],
       "rules": {
-        "S5122": {
-          "id": "S5122",
-          "shortDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
-          "fullDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive. It has led in the past to the following vulnerabilities:",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5122",
+        "CA1860": {
+          "id": "CA1860",
+          "shortDescription": "Avoid using 'Enumerable.Any()' extension method",
+          "fullDescription": "Prefer using 'IsEmpty', 'Count' or 'Length' properties whichever available, rather than calling 'Enumerable.Any()'. The intent is clearer and it is more performant than using 'Enumerable.Any()' extension method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1860",
           "properties": {
-            "category": "Minor Security Hotspot",
+            "category": "Performance",
             "isEnabledByDefault": true,
             "tags": [
-              "C#",
-              "MainSourceScope",
-              "SonarWay"
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
             ]
           }
         }

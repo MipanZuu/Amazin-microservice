@@ -1,4 +1,12 @@
-y
-X/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/Program.csr
-Ç
-
+†
+i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Services/ProductService.cs 8r 	
+!#$&'(Ç!$&è
+Y/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Program.cs8jr	 !#xÇ	#|
+e/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Models/ProductModel.cs 8r	
+“
+o/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/ProductController.cs 8
+r<	
+ !"#$&')*+,-.01234579:;=>?@ABDFGHIxÇ"#$&,-34579:@ABDFé
+r/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/HelloWorldController.cs 8r	
+ÇÇ
+q/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Configurations/DatabaseSettings.cs 8r	

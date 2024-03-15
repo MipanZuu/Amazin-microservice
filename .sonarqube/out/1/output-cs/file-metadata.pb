@@ -1,9 +1,6 @@
-Ñ
-y/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/obj/Debug/net8.0/User-Service.AssemblyInfo.csutf-8ó
-ã/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Ü
-{/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/obj/Debug/net8.0/User-Service.GlobalUsings.g.csutf-8l
-c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Services/UserService.csutf-8_
-V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Program.csutf-8h
-_/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.csutf-8r
-i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Controllers/UserController.csutf-8v
-m/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Configuration/DatabaseSettings.csutf-8
+ú
+ê/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/AmazinGateaway.MvcApplicationPartsAssemblyInfo.csutf-8à
+}/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/AmazinGateaway.AssemblyInfo.csutf-8ô
+ç/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8ä
+/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/obj/Debug/net8.0/AmazinGateaway.GlobalUsings.g.csutf-8a
+X/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/AmazinGateaway/Program.csutf-8

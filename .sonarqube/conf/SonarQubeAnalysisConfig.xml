@@ -132,8 +132,8 @@
     <Property Name="sonar.auth.gitlab.url">https://gitlab.com</Property>
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.updatecenter.url">https://update.sonarsource.org/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">14/03/2024 23.45.12</Property>
     <Property Name="sonar.core.id">147B411E-AY4_JBbmUOV0uNHazWlp</Property>
+    <Property Name="sonar.core.startTime">15/03/2024 16.09.36</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
@@ -146,20 +146,20 @@
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="csharp" Version="9.19.0.84025" StaticResourceName="SonarAnalyzer-9.19.0.84025.zip">
           <AssemblyPaths>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/Google.Protobuf.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/SonarAnalyzer.CFG.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/SonarAnalyzer.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/THIRD-PARTY-NOTICES.txt</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/SonarAnalyzer.CSharp.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/Google.Protobuf.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/SonarAnalyzer.CFG.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/SonarAnalyzer.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/THIRD-PARTY-NOTICES.txt</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/SonarAnalyzer.CSharp.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="vbnet" Version="9.19.0.84025" StaticResourceName="SonarAnalyzer-9.19.0.84025.zip">
           <AssemblyPaths>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/SonarAnalyzer.VisualBasic.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/Google.Protobuf.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/SonarAnalyzer.CFG.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/SonarAnalyzer.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/THIRD-PARTY-NOTICES.txt</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/Google.Protobuf.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/SonarAnalyzer.CFG.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/SonarAnalyzer.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
@@ -174,20 +174,20 @@
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="csharp" Version="9.19.0.84025" StaticResourceName="SonarAnalyzer-9.19.0.84025.zip">
           <AssemblyPaths>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/Google.Protobuf.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/SonarAnalyzer.CFG.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/SonarAnalyzer.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/THIRD-PARTY-NOTICES.txt</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/2/SonarAnalyzer.CSharp.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/Google.Protobuf.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/SonarAnalyzer.CFG.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/SonarAnalyzer.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/THIRD-PARTY-NOTICES.txt</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/0/SonarAnalyzer.CSharp.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="vbnet" Version="9.19.0.84025" StaticResourceName="SonarAnalyzer-9.19.0.84025.zip">
           <AssemblyPaths>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/SonarAnalyzer.VisualBasic.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/Google.Protobuf.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/SonarAnalyzer.CFG.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/SonarAnalyzer.dll</Path>
-            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/3/THIRD-PARTY-NOTICES.txt</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/Google.Protobuf.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/SonarAnalyzer.CFG.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/SonarAnalyzer.dll</Path>
+            <Path>/var/folders/lq/ljfrddx57ndcp3zt4g206c9c0000gn/T/.sonarqube/resources/1/THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
