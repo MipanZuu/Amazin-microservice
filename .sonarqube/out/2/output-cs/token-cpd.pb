@@ -218,7 +218,118 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
 idb d
 )d e
 ;e f
-} ¯
+} †
+
+_/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.cs
+	namespace 	
+User_Service
+ 
+. 
+Models 
+; 
+public 
+class 
+	UserModel 
+{ 
+[ 
+BsonId 
+] 
+[ 
+BsonRepresentation 
+( 
+BsonType  
+.  !
+ObjectId! )
+)) *
+]* +
+public 
+
+string 
+? 
+Id 
+{ 
+get 
+; 
+set 
+;  
+}! "
+[
+
+ 
+BsonElement
+
+ 
+(
+
+ 
+$str
+
+ 
+)
+
+ 
+]
+
+ 
+public
+
+  
+string
+
+! '
+Name
+
+( ,
+{
+
+- .
+get
+
+/ 2
+;
+
+2 3
+set
+
+4 7
+;
+
+7 8
+}
+
+9 :
+=
+
+; <
+null
+
+= A
+!
+
+A B
+;
+
+B C
+[ 
+BsonElement 
+( 
+$str 
+) 
+] 
+public $
+string% +
+Username, 4
+{5 6
+get7 :
+;: ;
+set< ?
+;? @
+}A B
+=C D
+nullE I
+!I J
+;J K
+} ¯
 V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Program.cs
 var 
 builder 
@@ -363,118 +474,7 @@ GetSectionC M
 (## 
 )## 	
 ;##	 
-†
-
-_/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.cs
-	namespace 	
-User_Service
- 
-. 
-Models 
-; 
-public 
-class 
-	UserModel 
-{ 
-[ 
-BsonId 
-] 
-[ 
-BsonRepresentation 
-( 
-BsonType  
-.  !
-ObjectId! )
-)) *
-]* +
-public 
-
-string 
-? 
-Id 
-{ 
-get 
-; 
-set 
-;  
-}! "
-[
-
- 
-BsonElement
-
- 
-(
-
- 
-$str
-
- 
-)
-
- 
-]
-
- 
-public
-
-  
-string
-
-! '
-Name
-
-( ,
-{
-
-- .
-get
-
-/ 2
-;
-
-2 3
-set
-
-4 7
-;
-
-7 8
-}
-
-9 :
-=
-
-; <
-null
-
-= A
-!
-
-A B
-;
-
-B C
-[ 
-BsonElement 
-( 
-$str 
-) 
-] 
-public $
-string% +
-Username, 4
-{5 6
-get7 :
-;: ;
-set< ?
-;? @
-}A B
-=C D
-nullE I
-!I J
-;J K
-} Ç)
+Ç)
 i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Controllers/UserController.cs
 	namespace 	
 User_Service

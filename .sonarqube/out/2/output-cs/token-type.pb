@@ -19,16 +19,7 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
    * 0  
   " +: ? 
   " +  
-  " (0 5¹
-V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Program.cs
- 
- 
-   +N ]
- !		 )
- 
- '
-  )	 ƒ  7  
- !! 5Ó
+  " (0 5Ó
 _/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.cs
  	
  
@@ -48,7 +39,16 @@ _/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Mod
 
 4 7
 
-= A   $% +7 :< ?E IÏ	
+= A   $% +7 :< ?E I¹
+V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Program.cs
+ 
+ 
+   +N ]
+ !		 )
+ 
+ '
+  )	 ƒ  7  
+ !! 5Ï	
 i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Controllers/UserController.cs
  
  

@@ -20,9 +20,9 @@
               "resultFile": {
                 "uri": "file:///Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/Product-Service/Controllers/ProductController.cs",
                 "region": {
-                  "startLine": 35,
+                  "startLine": 32,
                   "startColumn": 17,
-                  "endLine": 35,
+                  "endLine": 32,
                   "endColumn": 34
                 }
               }
