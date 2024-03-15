@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("MongoDatabase"));
 
-builder.Services.AddSingleton<ProductService>();
+builder.Services.AddSingleton<IProductService, ProductService>();
 
 builder.Services.AddControllers();
 
