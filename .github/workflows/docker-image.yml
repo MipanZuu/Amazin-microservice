@@ -65,7 +65,7 @@ jobs:
       - name: Deploy with Docker Compose
         run: docker-compose -f docker-compose.yml up -d
 
-# SonarQube
+# SonarQube 
   Sonarqube:
     name: Sonarqube
     runs-on: windows-latest
