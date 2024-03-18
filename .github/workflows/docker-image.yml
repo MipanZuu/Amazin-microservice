@@ -8,7 +8,7 @@ on:
 jobs:
 # Testing
   testing:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -68,12 +68,12 @@ jobs:
 # SonarQube 
   Sonarqube:
     name: Sonarqube
-    runs-on: windows-latest
+    runs-on: self-hosted
     permissions: read-all
     steps:
         - uses: actions/checkout@v2
           with:
-            fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+            fetch-depth: 0 
         - name: Set up JDK 17
           uses: actions/setup-java@v1
           with:
