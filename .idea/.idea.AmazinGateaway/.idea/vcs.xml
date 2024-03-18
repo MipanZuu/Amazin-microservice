@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AmazinGateaway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Product-Service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/User-Service" vcs="Git" />
   </component>
 </project>
