@@ -64,8 +64,9 @@ jobs:
 
       - name: Deploy with Docker Compose
         run: docker-compose -f docker-compose.yml up -d
-
-# SonarQube 
+        
+        
+  # SonarQube 
   Sonarqube:
     name: Sonarqube
     runs-on: self-hosted
@@ -74,29 +75,18 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Set up JDK 17
-        uses: actions/setup-java@v1
+      - name: Set up .NET Core SDK
+        uses: actions/setup-dotnet@v1
         with:
-          java-version: 17
+          dotnet-version: '6.0.x' # Change to your desired .NET version
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-      - name: Cache SonarQube scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v1
-        with:
-          path: ./.sonar/scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
-      - name: Install SonarQube scanner
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+      - name: Run SonarQube analysis
         run: |
-          mkdir -p ./.sonar/scanner
-          curl -L https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-macosx.zip -o sonar-scanner.zip
-          unzip sonar-scanner.zip -d ./.sonar/scanner
-      - name: Build and analyze
-        run: |
-          ./.sonar/scanner/sonar-scanner-4.6.2.2472-macosx/bin/sonar-scanner -Dsonar.projectKey="Amazin" -Dsonar.host.url="${{ secrets.SONAR_HOST_URL }}" -Dsonar.login="${{ secrets.SONAR_TOKEN }}"
+          ~/.dotnet/tools/dotnet-sonarscanner begin /k:"Amazin" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          dotnet build
+          ~/.dotnet/tools/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
