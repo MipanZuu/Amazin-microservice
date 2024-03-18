@@ -26,18 +26,7 @@ c/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Ser
 
  !
 ) +b d
-U VZ [‘
-_/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.cs
-
- 
-
- 
-
-
-
-( ,
-
-, 4ò
+U VZ [ò
 V/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Program.cs6
   - 4		  
  `
@@ -65,7 +54,18 @@ i/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Con
 
 88% /
 887 9::7 9>>' )
-:: ;; Ÿ
+:: ;; ‘
+_/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Models/UserModel.cs
+
+ 
+
+ 
+
+
+
+( ,
+
+, 4Ÿ
 m/Users/dentabramasta/Amazin-Project/APIGateaway/AmazinGateaway/User-Service/Configuration/DatabaseSettings.cs
 
  

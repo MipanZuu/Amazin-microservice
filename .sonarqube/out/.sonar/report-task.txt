@@ -2,5 +2,5 @@ projectKey=Amazin
 serverUrl=http://localhost:9000
 serverVersion=10.4.1.88267
 dashboardUrl=http://localhost:9000/dashboard?id=Amazin
-ceTaskId=3024a273-fcc4-4530-8c4f-90318240ff1c
-ceTaskUrl=http://localhost:9000/api/ce/task?id=3024a273-fcc4-4530-8c4f-90318240ff1c
+ceTaskId=c136fb81-b334-43a2-9ba4-deb394fe2251
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c136fb81-b334-43a2-9ba4-deb394fe2251
